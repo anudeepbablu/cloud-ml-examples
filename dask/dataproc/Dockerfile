@@ -18,6 +18,7 @@ ENV PATH $PATH:/usr/local/gcloud/google-cloud-sdk/bin
 # Make sure to get project authentication key file from google cloud service account 
 #RUN gcloud auth activate-service-account --key-file k80-exploration-key.json
 RUN gcloud components install kubectl 
+
 # startup command
-WORKDIR /home/anallamothu/projects
+WORKDIR /home/anallamothu/
 CMD jupyter notebook --allow-root --ip=0.0.0.0 --no-browser --NotebookApp.token=''
